@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Landing de estudio para la certificación Microsoft SC-500: los 4 dominios del examen, resúmenes en español y 30 preguntas de práctica con explicaciones.">
+  <meta name="theme-color" content="#0f0f17">
+  <title>SC-500 Study Lab · Prepara la certificación Microsoft SC-500</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio">
+        <span class="brand__mark" aria-hidden="true">SC</span>
+        <span class="brand__text">SC-500 <strong>Study Lab</strong></span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#dominios">Dominios</a>
+        <a href="#quiz">Quiz</a>
+      </nav>
+      <a class="btn btn--small btn--primary" href="#quiz">Practicar</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__glow hero__glow--blue" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--green" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="hero__badge">Certificación Microsoft · SC-500</p>
+        <h1 class="hero__title">Domina la certificación <span class="accent">Microsoft SC-500</span> con un plan de estudio estructurado</h1>
+        <p class="hero__lead">
+          Estudio guiado de los 4 dominios del examen: identidad y gobernanza, seguridad de datos y red,
+          cómputo seguro y gestión de la postura de seguridad. Resúmenes claros en español y un test
+          interactivo de 30 preguntas con explicaciones de cada respuesta.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#dominios">Comenzar a estudiar</a>
+          <a class="btn btn--ghost" href="#quiz">Hacer el test de 30 preguntas</a>
+        </div>
+        <ul class="hero__stats">
+          <li><strong>4</strong><span>Dominios del examen</span></li>
+          <li><strong>30</strong><span>Preguntas de práctica</span></li>
+          <li><strong>100%</strong><span>Contenido en español</span></li>
+          <li><strong>0 €</strong><span>Acceso libre y estático</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="domains section" id="dominios">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">Temario</p>
+          <h2>Los 4 dominios del examen</h2>
+          <p class="section__lead">
+            Selecciona un dominio y despliega cada subsección para estudiar los servicios clave,
+            sus escenarios de examen y las recomendaciones de la práctica recomendada por Microsoft.
+          </p>
+        </header>
+
+        <div class="tabs reveal">
+          <div class="tabs__list" role="tablist" aria-label="Dominios del examen SC-500">
+            <button type="button" class="tab is-active" id="tab-1" role="tab" aria-selected="true" aria-controls="panel-1" tabindex="0">
+              <span class="tab__num">01</span>
+              <span class="tab__label">Identidad, acceso y gobernanza</span>
+            </button>
+            <button type="button" class="tab" id="tab-2" role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1">
+              <span class="tab__num">02</span>
+              <span class="tab__label">Almacenamiento, datos y red</span>
+            </button>
+            <button type="button" class="tab" id="tab-3" role="tab" aria-selected="false" aria-controls="panel-3" tabindex="-1">
+              <span class="tab__num">03</span>
+              <span class="tab__label">Cómputo seguro</span>
+            </button>
+            <button type="button" class="tab" id="tab-4" role="tab" aria-selected="false" aria-controls="panel-4" tabindex="-1">
+              <span class="tab__num">04</span>
+              <span class="tab__label">Postura y monitorización</span>
+            </button>
+          </div>
+
+          <div class="tabs__panels">
+            <article class="tab-panel is-active" id="panel-1" role="tabpanel" aria-labelledby="tab-1" tabindex="0">
+              <header class="tab-panel__head">
+                <p class="tab-panel__kicker">Dominio 1</p>
+                <h3>Manage identity, access, and governance</h3>
+                <p class="tab-panel__es">Gestión de identidad, acceso y gobernanza</p>
+                <p>
+                  Protege la línea de entrada del entorno: quién accede, con qué privilegios y bajo qué
+                  políticas. Este dominio conecta Microsoft Entra ID con el control de acceso (RBAC, PIM),
+                  la protección de secretos (Key Vault) y la gobernanza mediante Azure Policy.
+                </p>
+                <p class="tab-panel__meta">8 preguntas de práctica en el quiz</p>
+              </header>
+
+              <div class="accordion">
+                <section class="collapsible is-open">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d1-s1" aria-expanded="true" aria-controls="d1-s1-c">
+                      Identidad en Microsoft Entra ID
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d1-s1-c" role="region" aria-labelledby="d1-s1">
+                    <div class="collapsible__inner">
+                      <p>
+                        Microsoft Entra ID (antes Azure Active Directory) es el servicio de identidad y
+                        acceso de la nube de Microsoft: gestiona usuarios, grupos, aplicaciones y dispositivos,
+                        y permite federación con identidades externas (B2B/B2C) y con otros proveedores cloud.
+                      </p>
+                      <ul>
+                        <li><strong>Tipos de cuenta:</strong> usuarios miembros e invitados, grupos de seguridad y equipos, aplicaciones y service principals.</li>
+                        <li><strong>Identidades híbridas:</strong> Microsoft Entra Connect sincroniza con Active Directory on-premises; la identidad administrada (managed identity) resuelve credenciales en recursos Azure.</li>
+                        <li><strong>Protección:</strong> Entra ID Protection evalúa riesgo de inicio de sesión y de usuario, y Conditional Access toma decisiones con ese contexto.</li>
+                        <li><strong>Escenario de examen:</strong> distinguir cuándo usar Entra ID (identidad cloud), service principal (aplicación) o managed identity (recurso Azure sin secretos).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d1-s2" aria-expanded="false" aria-controls="d1-s2-c">
+                      Acceso privilegiado: RBAC y PIM
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d1-s2-c" role="region" aria-labelledby="d1-s2">
+                    <div class="collapsible__inner">
+                      <p>
+                        Azure RBAC asigna roles sobre ámbitos jerárquicos: grupo de administración →
+                        suscripción → resource group → recurso. Los permisos se heredan hacia abajo y se
+                        conceden con el principio de mínimo privilegio.
+                      </p>
+                      <ul>
+                        <li><strong>Componentes:</strong> seguridad (quién), rol (qué puede hacer) y ámbito (dónde aplica).</li>
+                        <li><strong>Microsoft Entra PIM:</strong> roles <em>elegibles</em> que se activan just-in-time con aprobación, justificación, MFA y límite de duración.</li>
+                        <li><strong>Revisión de acceso:</strong> auditoría periódica de asignaciones para eliminar privilegios innecesarios.</li>
+                        <li><strong>Cuidado:</strong> Owner no debe repartirse; Owner incluye la capacidad de asignar roles.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d1-s3" aria-expanded="false" aria-controls="d1-s3-c">
+                      Secretos y claves con Azure Key Vault
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d1-s3-c" role="region" aria-labelledby="d1-s3">
+                    <div class="collapsible__inner">
+                      <p>
+                        Key Vault centraliza claves, secretos y certificados con control de acceso granular,
+                        registro de auditoría (diagnostic logs) y políticas de retención.
+                      </p>
+                      <ul>
+                        <li><strong>Tipo de recurso:</strong> Managed HSM ofrece un HSM dedicado y aislado (FIPS 140-2 Nivel 3) para claves maestras de cliente.</li>
+                        <li><strong>Acceso:</strong> modelo RBAC (recomendado) o access policies heredadas por vault.</li>
+                        <li><strong>Protección:</strong> soft delete y purge protection evitan la eliminación accidental o maliciosa.</li>
+                        <li><strong>Integración:</strong> las aplicaciones usan identidades administradas para leer secretos sin guardar credenciales en el código.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d1-s4" aria-expanded="false" aria-controls="d1-s4-c">
+                      Gobernanza con Azure Policy e initiatives
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d1-s4-c" role="region" aria-labelledby="d1-s4">
+                    <div class="collapsible__inner">
+                      <p>
+                        Azure Policy evalúa recursos y planes de recursos para garantizar que la configuración
+                        cumpla estándares. Las iniciativas (initiatives) agrupan varias políticas bajo un objetivo.
+                      </p>
+                      <ul>
+                        <li><strong>Efectos comunes:</strong> <em>Deny</em> bloquea cambios inválidos, <em>Audit</em> solo registra desviaciones, <em>Modify</em> aplica cambios (p. ej. tags) y <em>DeployIfNotExists</em> crea el componente faltante.</li>
+                        <li><strong>Remediación:</strong> las tareas de remediation corrigen recursos existentes que incumplen la política.</li>
+                        <li><strong>Alcance:</strong> se asignan en management groups, suscripciones, resource groups o recursos, con exclusiones.</li>
+                        <li><strong>Complemento:</strong> Regulatory compliance en Defender for Cloud mapea las políticas contra estándares (ISO, SOC, PCI DSS).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d1-s5" aria-expanded="false" aria-controls="d1-s5-c">
+                      Conditional Access, MFA y acceso sin contraseña
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d1-s5-c" role="region" aria-labelledby="d1-s5">
+                    <div class="collapsible__inner">
+                      <p>
+                        Las políticas de acceso condicional combinan señales (usuario, ubicación, dispositivo,
+                        riesgo, aplicación) con controles (MFA, bloqueo, tokens de acceso) para decidir si se
+                        concede el acceso.
+                      </p>
+                      <ul>
+                        <li><strong>Señales:</strong> riesgo de usuario/sesión de Entra ID Protection, dispositivo conforme, ubicación, tipo de cliente.</li>
+                        <li><strong>MFA resistente al phishing:</strong> FIDO2 security keys, passkeys y Windows Hello for Business; evitan MFA fatigue e ingeniería social frente a SMS/OTP.</li>
+                        <li><strong>Sin contraseña:</strong> passwordless con FIDO2, WH4B y Authenticator con number matching.</li>
+                        <li><strong>Buenas prácticas:</strong> empezar con modo informe (Report-only), excluir una cuenta de emergencia y no bloquear al administrador global.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+
+            <article class="tab-panel" id="panel-2" role="tabpanel" aria-labelledby="tab-2" tabindex="0" hidden>
+              <header class="tab-panel__head">
+                <p class="tab-panel__kicker">Dominio 2</p>
+                <h3>Secure storage, databases, and networking</h3>
+                <p class="tab-panel__es">Protección de almacenamiento, bases de datos y redes</p>
+                <p>
+                  Reduce la superficie de exposición de los datos en reposo y en tránsito: firewalls de
+                  almacenamiento, auditoría en bases de datos, segmentación de red con NSG/ASG, conectividad
+                  privada y perímetro de defensa con Firewall y DDoS.
+                </p>
+                <p class="tab-panel__meta">8 preguntas de práctica en el quiz</p>
+              </header>
+
+              <div class="accordion">
+                <section class="collapsible is-open">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d2-s1" aria-expanded="true" aria-controls="d2-s1-c">
+                      Almacenamiento seguro y Defender for Storage
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d2-s1-c" role="region" aria-labelledby="d2-s1">
+                    <div class="collapsible__inner">
+                      <p>
+                        Las cuentas de almacenamiento deben restringirse a redes y identidades conocidas;
+                        la exposición pública innecesaria es una de las fallas más comunes en los casos de examen.
+                      </p>
+                      <ul>
+                        <li><strong>Firewall de la cuenta:</strong> reglas de IP y de red virtual; desactiva el acceso desde todas las redes y usa Private Endpoints.</li>
+                        <li><strong>Acceso:</strong> autenticación con Entra ID (OAuth/RBAC) o SAS cortas y con permisos mínimos; evitar claves de cuenta compartidas.</li>
+                        <li><strong>Defender for Storage:</strong> detecta datos sensibles, credenciales expuestas, malware y patrones de acceso anómalos en blobs.</li>
+                        <li><strong>Resiliencia de datos:</strong> soft delete (blobs, snapshots, versioning), retención inmutable y cifrado con claves de cliente (CMK).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d2-s2" aria-expanded="false" aria-controls="d2-s2-c">
+                      Bases de datos: auditoría y Defender for Azure SQL
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d2-s2-c" role="region" aria-labelledby="d2-s2">
+                    <div class="collapsible__inner">
+                      <p>
+                        El dominio exige conocer los mecanismos de detección y trazabilidad en Azure SQL
+                        Database y SQL Server en máquinas virtuales.
+                      </p>
+                      <ul>
+                        <li><strong>Auditing:</strong> registra eventos de base de datos y envía los logs a cuenta de almacenamiento, Log Analytics o Event Hub (para integrarlos con Sentinel). Amazon S3 no es un destino válido.</li>
+                        <li><strong>Microsoft Defender for Azure SQL:</strong> alerta sobre SQL injection, acceso anómalo y amenazas de la base de datos.</li>
+                        <li><strong>Cifrado:</strong> TDE en reposo, Always Encrypted para datos sensibles en cliente y encriptación de conexión con TLS.</li>
+                        <li><strong>Acceso:</strong> usuarios contenidos e identidades de Entra ID (SQL authentication/Entra-only) reducen el uso de sa.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d2-s3" aria-expanded="false" aria-controls="d2-s3-c">
+                      Segmentación de red: NSG y ASG
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d2-s3-c" role="region" aria-labelledby="d2-s3">
+                    <div class="collapsible__inner">
+                      <p>
+                        Los grupos de seguridad de red (NSG) filtran tráfico en la capa 3/4 hacia y desde
+                        interfaces de red y subredes, con reglas de prioridad numeradas.
+                      </p>
+                      <ul>
+                        <li><strong>Prioridad:</strong> el número más bajo se evalúa primero (100 antes que 4096); si no hay coincidencia aplica DenyAllInBound por defecto.</li>
+                        <li><strong>Ámbitos:</strong> NSG en subred (protege todas las NIC) y/o en NIC individual (regla más específica gana).</li>
+                        <li><strong>ASG:</strong> agrupa NIC con el mismo perfil de puertos para escribir reglas por nombre de aplicación en vez de rangos de IP.</li>
+                        <li><strong>Buenas prácticas:</strong> restringir administración remota (3389/22) a fuentes conocidas y usar Azure Bastion.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d2-s4" aria-expanded="false" aria-controls="d2-s4-c">
+                      Conectividad privada: Private Endpoints
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d2-s4-c" role="region" aria-labelledby="d2-s4">
+                    <div class="collapsible__inner">
+                      <p>
+                        Azure Private Link conecta servicios PaaS a una VNet mediante un Private Endpoint con
+                        IP privada, manteniendo el tráfico dentro de la red privada del cliente.
+                      </p>
+                      <ul>
+                        <li><strong>Private Endpoint:</strong> NIC privada que representa a Azure SQL, Storage, Key Vault, Cosmos DB, etc.</li>
+                        <li><strong>Private DNS:</strong> zona vinculada para que la resolución del nombre apunte a la IP privada.</li>
+                        <li><strong>Frente a service endpoints:</strong> Private Link resuelve el aislamiento completo del recurso, no solo de la red de origen.</li>
+                        <li><strong>Redundancia:</strong> combinar con VNet peering y zonas de disponibilidad según el RTO/RPO.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d2-s5" aria-expanded="false" aria-controls="d2-s5-c">
+                      Perímetro: Azure Firewall y DDoS Protection
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d2-s5-c" role="region" aria-labelledby="d2-s5">
+                    <div class="collapsible__inner">
+                      <p>
+                        El control de tráfico entre redes y hacia Internet complementa la segmentación interna
+                        con reglas centralizadas y mitigación de ataques a escala.
+                      </p>
+                      <ul>
+                        <li><strong>Azure Firewall:</strong> reglas de red (IP/puertos), reglas de aplicación (FQDN HTTP/S), Threat Intelligence, inspección privada entre VNet y Azure Firewall Policy gestionada.</li>
+                        <li><strong>Tipos:</strong> Standard y Premium (con TLS inspección y detección de amenazas basada en inteligencia).</li>
+                        <li><strong>DDoS Protection:</strong> planes Network Protection e IP Protection con mitigación automática y protección de coste.</li>
+                        <li><strong>WAF:</strong> Application Gateway/Front Door protegen aplicaciones web contra el OWASP Top 10; un NSG no inspecciona capa 7.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+
+            <article class="tab-panel" id="panel-3" role="tabpanel" aria-labelledby="tab-3" tabindex="0" hidden>
+              <header class="tab-panel__head">
+                <p class="tab-panel__kicker">Dominio 3</p>
+                <h3>Secure compute</h3>
+                <p class="tab-panel__es">Protección del cómputo: IA, VMs, contenedores y aplicaciones</p>
+                <p>
+                  Protege dónde corre el código: desde cargas de IA (Copilot, agentes y modelos) hasta
+                  máquinas virtuales, clústeres AKS, Azure Functions, App Service y la defensa perimetral
+                  con WAF.
+                </p>
+                <p class="tab-panel__meta">7 preguntas de práctica en el quiz</p>
+              </header>
+
+              <div class="accordion">
+                <section class="collapsible is-open">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d3-s1" aria-expanded="true" aria-controls="d3-s1-c">
+                      Seguridad de la IA: Copilot, DSPM y agentes
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d3-s1-c" role="region" aria-labelledby="d3-s1">
+                    <div class="collapsible__inner">
+                      <p>
+                        Las cargas de IA introducen riesgos nuevos: fugas de datos hacia modelos, agentes con
+                        privilegios y superficie de exposición en prompts y conectores.
+                      </p>
+                      <ul>
+                        <li><strong>Copilot for Security:</strong> investiga en lenguaje natural con un LLM orquestado por capacidades (plugins) y contexto de productos Microsoft.</li>
+                        <li><strong>DSPM:</strong> Data Security Posture Management descubre y clasifica datos sensibles y evalúa su riesgo en la nube.</li>
+                        <li><strong>Microsoft Entra Agent ID:</strong> identidad dedicada y gobernada para agentes de IA, con permisos y Conditional Access.</li>
+                        <li><strong>Defender for AI:</strong> plan de Defender for Cloud orientado a proteger aplicaciones y agentes de IA (modelos, datos y configuración).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d3-s2" aria-expanded="false" aria-controls="d3-s2-c">
+                      Máquinas virtuales seguras: cifrado, JIT y Bastion
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d3-s2-c" role="region" aria-labelledby="d3-s2">
+                    <div class="collapsible__inner">
+                      <p>
+                        La protección de VM combina cifrado del disco, arranque verificado, acceso temporal
+                        a administración y gestión unificada del inventario híbrido.
+                      </p>
+                      <ul>
+                        <li><strong>Cifrado:</strong> Azure Disk Encryption (BitLocker/dm-crypt gestionado por Key Vault) y cifrado en host con claves de cliente.</li>
+                        <li><strong>Trusted Launch:</strong> habilita <strong>Secure Boot</strong> (integridad de la cadena de arranque) y <strong>vTPM</strong> (mediciones y claves protegidas).</li>
+                        <li><strong>Just-in-Time (Defender for Servers):</strong> abre RDP/SSH solo durante una ventana aprobada y con reglas NSG temporales.</li>
+                        <li><strong>Azure Bastion:</strong> conexión RDP/SSH a través del portal por TLS sin IP pública expuesta; <strong>Azure Arc</strong> extiende políticas y Defender a recursos híbridos y multicloud.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d3-s3" aria-expanded="false" aria-controls="d3-s3-c">
+                      Contenedores y Azure Kubernetes Service
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d3-s3-c" role="region" aria-labelledby="d3-s3">
+                    <div class="collapsible__inner">
+                      <p>
+                        En AKS la seguridad abarca el plano de control, los nodos, los manifiestos y las
+                        credenciales que usan los pods en ejecución.
+                      </p>
+                      <ul>
+                        <li><strong>Workload Identity (OIDC):</strong> los pods asumen una identidad administrada federada con Entra ID, sin secretos en YAML.</li>
+                        <li><strong>Defender for Containers:</strong> protege el clúster, las imágenes del registro y el trabajo en ejecución, con alertas y recomendaciones.</li>
+                        <li><strong>Gobernanza:</strong> Azure Policy para Kubernetes aplica restricciones (p. ej. prohibits privileged containers, require labels).</li>
+                        <li><strong>Buenas prácticas:</strong> RBAC de Kubernetes, isolation de nodos (system/user node pools) y secretos en Key Vault con CSI driver.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d3-s4" aria-expanded="false" aria-controls="d3-s4-c">
+                      App Service, Functions y WAF
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d3-s4-c" role="region" aria-labelledby="d3-s4">
+                    <div class="collapsible__inner">
+                      <p>
+                        Las aplicaciones web y serverless se exponen vía HTTP, por lo que la protección combina
+                        identidad, restricciones de acceso y defensa en capa 7.
+                      </p>
+                      <ul>
+                        <li><strong>App Service:</strong> access restrictions por IP/VNet, identidad administrada para datos y despliegue sin credenciales.</li>
+                        <li><strong>Functions:</strong> claves de función rotadas, integración con Key Vault y acceso mediante identidad administrada.</li>
+                        <li><strong>Azure WAF:</strong> se despliega en Application Gateway o Front Door y aplica el Core Rule Set del OWASP Top 10 (inyección, XSS, etc.).</li>
+                        <li><strong>Defender for App Service:</strong> alerta de explotación, escaneo de amenazas y detección de bots/malware en el sitio.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+
+            <article class="tab-panel" id="panel-4" role="tabpanel" aria-labelledby="tab-4" tabindex="0" hidden>
+              <header class="tab-panel__head">
+                <p class="tab-panel__kicker">Dominio 4</p>
+                <h3>Manage and monitor security posture</h3>
+                <p class="tab-panel__es">Gestión y monitorización de la postura de seguridad</p>
+                <p>
+                  Mide, prioriza y responde: postura continua con Defender CSPM, protección de cargas con
+                  planes de Defender for Cloud, detección con Sentinel, análisis asistido con Security
+                  Copilot y correlación con Defender XDR y EASM.
+                </p>
+                <p class="tab-panel__meta">7 preguntas de práctica en el quiz</p>
+              </header>
+
+              <div class="accordion">
+                <section class="collapsible is-open">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d4-s1" aria-expanded="true" aria-controls="d4-s1-c">
+                      Defender for Cloud y plan Defender CSPM
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d4-s1-c" role="region" aria-labelledby="d4-s1">
+                    <div class="collapsible__inner">
+                      <p>
+                        Defender for Cloud reúne la gestión de la postura (CSPM) y la protección de cargas
+                        (CWPP) en un único portal con recomendaciones, Secure Score y cumplimiento normativo.
+                      </p>
+                      <ul>
+                        <li><strong>Plan gratuito:</strong> recomendaciones, Secure Score, evaluaciones de cumplimiento y CSPM básico.</li>
+                        <li><strong>Defender CSPM:</strong> plan avanzado con grafo de rutas de ataque (attack paths), evaluación de riesgos, gestión de identidades y capacidades DevSecOps.</li>
+                        <li><strong>Secure Score:</strong> mide la adopción de mejores prácticas y permite comparar el progreso entre tenants.</li>
+                        <li><strong>Conectores:</strong> AWS, GCP y entornos híbridos vía Azure Arc para una postura multicloud.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d4-s2" aria-expanded="false" aria-controls="d4-s2-c">
+                      Planes de protección de cargas (workload plans)
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d4-s2-c" role="region" aria-labelledby="d4-s2">
+                    <div class="collapsible__inner">
+                      <p>
+                        Cada plan especializado añade detecciones y recomendaciones específicas del tipo de
+                        recurso, activables por suscripción con nivel de precios Estándar.
+                      </p>
+                      <ul>
+                        <li><strong>Defender for Servers:</strong> agente de máquina virtual, análisis de vulnerabilidades, acceso JIT y AMA.</li>
+                        <li><strong>Defender for Containers:</strong> AKS/registros/imagenes y trabajo en ejecución.</li>
+                        <li><strong>Defender for Storage, App Service, Databases, DNS, Key Vault, Resource Graph y AI apps:</strong> protección específica de cada recurso.</li>
+                        <li><strong>Alertas:</strong> se envían a Sentinel, Logic Apps o herramientas externas para su remediación.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d4-s3" aria-expanded="false" aria-controls="d4-s3-c">
+                      Microsoft Sentinel: SIEM/SOAR en la nube
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d4-s3-c" role="region" aria-labelledby="d4-s3">
+                    <div class="collapsible__inner">
+                      <p>
+                        Sentinel centraliza registros de fuentes cloud y on-premises, correlaciona amenazas
+                        con reglas de análisis y automatiza la respuesta con playbooks (SOAR).
+                      </p>
+                      <ul>
+                        <li><strong>Consulta:</strong> Kusto Query Language (KQL) para reglas, hunting e investigaciones en Log Analytics.</li>
+                        <li><strong>Correlación:</strong> reglas de análisis, Fusion (ataques multi-etapa) y alertas con incidentes agrupados.</li>
+                        <li><strong>Automatización:</strong> playbooks con Logic Apps, respuesta a Defender y usuarios bloqueados vía Entra.</li>
+                        <li><strong>Coste:</strong> basado en ingesta de datos y retención; usar tablas de auditoría eficientes y conexores nativos.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d4-s4" aria-expanded="false" aria-controls="d4-s4-c">
+                      Security Copilot y Defender XDR
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d4-s4-c" role="region" aria-labelledby="d4-s4">
+                    <div class="collapsible__inner">
+                      <p>
+                        La operativa moderna combina detección unificada con análisis asistido por IA para
+                        reducir el tiempo de investigación y contención.
+                      </p>
+                      <ul>
+                        <li><strong>Microsoft Security Copilot:</strong> LLM con orquestador de seguridad y capacidades de Defender, Entra, Sentinel e Intune para resumir, investigar y generar KQL.</li>
+                        <li><strong>Defender XDR:</strong> correlaciona correo, identidad, endpoint y colaboración en incidentes unificados con acciones automatizadas de respuesta.</li>
+                        <li><strong>Investigación:</strong> Explorer/Advanced Hunting permite seguir un ataque entre dominios (usuario → correo → endpoint).</li>
+                        <li><strong>Medición:</strong> MTTD/MTTR y reducción de ruido de alertas como métricas del programa de seguridad.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="collapsible">
+                  <h4>
+                    <button type="button" class="collapsible__toggle" id="d4-s5" aria-expanded="false" aria-controls="d4-s5-c">
+                      EASM y monitorización continua
+                      <span class="collapsible__icon" aria-hidden="true"></span>
+                    </button>
+                  </h4>
+                  <div class="collapsible__content" id="d4-s5-c" role="region" aria-labelledby="d4-s5">
+                    <div class="collapsible__inner">
+                      <p>
+                        Conocer el perímetro externo es prerequisite para reducir el riesgo: activos no
+                        gestionados suelen ser la vía de entrada en los estudios de caso del examen.
+                      </p>
+                      <ul>
+                        <li><strong>Defender EASM:</strong> descubre y monitorea activos expuestos a Internet, incluido el shadow IT no inventariado.</li>
+                        <li><strong>Inventario:</strong> dominios, IPs, servicios públicos, certificados y vulnerabilidades asociadas.</li>
+                        <li><strong>Integración:</strong> sus hallazgos alimentan recomendaciones y riesgos dentro de Defender for Cloud.</li>
+                        <li><strong>Operación:</strong> combinación de alertas de Defender, Sentinel, EASM y Workbooks para el seguimiento del posture management.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz section" id="quiz">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="section__eyebrow">Evaluación</p>
+          <h2>Quiz de práctica · 30 preguntas</h2>
+          <p class="section__lead">
+            Preguntas distribuidas por dominio, con 4 opciones, validación inmediata y explicación de la
+            respuesta correcta. Filtra por dominio para reforzar tus puntos débiles.
+          </p>
+        </header>
+
+        <div class="quiz__toolbar reveal">
+          <div class="filters" role="group" aria-label="Filtrar preguntas por dominio">
+            <button type="button" class="chip is-active" data-filter="all">Todos</button>
+            <button type="button" class="chip" data-filter="1">Dominio 1</button>
+            <button type="button" class="chip" data-filter="2">Dominio 2</button>
+            <button type="button" class="chip" data-filter="3">Dominio 3</button>
+            <button type="button" class="chip" data-filter="4">Dominio 4</button>
+          </div>
+          <div class="score" aria-live="polite">
+            <span class="score__label">Aciertos</span>
+            <span class="score__value"><span id="score-correct">0</span> / <span id="score-total">30</span></span>
+          </div>
+        </div>
+
+        <div class="progress reveal" aria-hidden="true"><span class="progress__bar" id="progress-bar"></span></div>
+
+        <div class="quiz__actions reveal">
+          <button class="btn btn--primary" id="check-all" type="button">Comprobar todas</button>
+          <button class="btn btn--ghost" id="reset-quiz" type="button">Reiniciar test</button>
+        </div>
+
+        <div class="quiz__list" id="quiz-list" aria-live="polite">
+          <p class="quiz__loading">Cargando preguntas…</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Repasa, valida y avanza</h2>
+          <p>Combina el estudio de los dominios con el test: empieza por el Dominio 1 y sube hasta completar las 30 preguntas.</p>
+        </div>
+        <a class="btn btn--primary" href="#dominios">Volver a los dominios</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p><strong>SC-500 Study Lab</strong> · Material de estudio independiente en español.</p>
+      <p>Proyecto estático sin frameworks · No afiliado ni respaldado por Microsoft. Microsoft, Entra y Defender son marcas registradas de Microsoft Corporation.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

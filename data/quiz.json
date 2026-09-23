@@ -1,0 +1,396 @@
+{
+  "title": "Quiz de práctica Microsoft SC-500",
+  "language": "es",
+  "questions": [
+    {
+      "id": 1,
+      "domain": 1,
+      "question": "¿Qué servicio de identidad en la nube de Microsoft sustituyó a Azure Active Directory y se usa para gestionar usuarios, grupos, aplicaciones y accesos en entornos multicloud?",
+      "options": [
+        "Microsoft Entra ID",
+        "Microsoft Defender for Identity",
+        "Azure Arc",
+        "Microsoft Sentinel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Microsoft Entra ID (antes Azure Active Directory) es el servicio de identidad y acceso de Microsoft. Defender for Identity monitorea Active Directory on-premises, Azure Arc gestiona recursos híbridos y Sentinel es un SIEM/SOAR en la nube."
+    },
+    {
+      "id": 2,
+      "domain": 1,
+      "question": "¿Qué tipo de recurso de Azure Key Vault proporciona un módulo de seguridad de hardware (HSM) dedicado, aislado y gestionado de forma automática para proteger claves maestras de cliente (CMK)?",
+      "options": [
+        "Azure Key Vault Managed HSM",
+        "Cuenta de almacenamiento con cifrado del lado del servidor",
+        "Azure App Configuration con un almacenamiento de claves",
+        "Centro de eventos (Event Hub) con autenticación mediante SAS"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Azure Key Vault Managed HSM es una instancia HSM dedicada y aislada (FIPS 140-2 Nivel 3) gestionada completamente por Azure. Las instancias estándar y premium de Key Vault guardan las claves en software dentro del servicio."
+    },
+    {
+      "id": 3,
+      "domain": 1,
+      "question": "¿Qué efecto (effect) de Azure Policy aplica cambios automáticos, como la asignación de etiquetas (tags), a recursos existentes que no cumplen la definición de política?",
+      "options": [
+        "Deny",
+        "Audit",
+        "Modify",
+        "Disabled"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Modify agrega, quita o reemplaza propiedades (por ejemplo, tags) en recursos existentes o nuevos. Deny bloquea la creación de recursos inválidos, Audit solo registra desviaciones y Disabled desactiva la evaluación de la política."
+    },
+    {
+      "id": 4,
+      "domain": 1,
+      "question": "En el modelo RBAC de Azure, ¿cuál es el nivel de ámbito (scope) más amplio al que se puede asignar un rol?",
+      "options": [
+        "Un recurso individual",
+        "Un resource group",
+        "Una suscripción",
+        "Un grupo de administración (management group)"
+      ],
+      "correctAnswer": 3,
+      "explanation": "La jerarquía de ámbitos es: grupo de administración > suscripción > resource group > recurso. Los management groups permiten aplicar roles sobre todas las suscripciones de un tenant, y los permisos se heredan hacia abajo."
+    },
+    {
+      "id": 5,
+      "domain": 1,
+      "question": "¿Qué capacidad de Microsoft Entra Privileged Identity Management (PIM) permite activar roles privilegiados solo durante el tiempo necesario, con controles como aprobación, justificación y MFA?",
+      "options": [
+        "La asignación permanente del rol a todos los administradores",
+        "La activación just-in-time (JIT) de roles elegibles con aprobación",
+        "El inventario de productos de seguridad del tenant",
+        "La revisión de acceso de usuarios invitados"
+      ],
+      "correctAnswer": 1,
+      "explanation": "PIM convierte las asignaciones de roles en elegibles que se activan de forma just-in-time, con aprobación, justificación, MFA y límites de duración. Esto aplica el principio de mínimo privilegio y reduce la exposición de las cuentas administrativas."
+    },
+    {
+      "id": 6,
+      "domain": 1,
+      "question": "¿Cuál de las siguientes NO es una señal (signal) que una política de Microsoft Entra Conditional Access puede evaluar antes de conceder o denegar el acceso?",
+      "options": [
+        "La ubicación geográfica desde la que inicia sesión el usuario",
+        "Si el dispositivo es conforme (compliant) o está unido al entorno",
+        "El riesgo de usuario o de sesión detectado por Entra ID Protection",
+        "El plan de licencia (SKU) de la suscripción de Azure"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Conditional Access evalúa señales como usuario, ubicación, dispositivo, riesgo, aplicación y tipo de cliente. El plan de licencia de la suscripción no forma parte del contexto de inicio de sesión que analiza la política."
+    },
+    {
+      "id": 7,
+      "domain": 1,
+      "question": "¿Cuál de los siguientes métodos de autenticación multifactor (MFA) se considera resistente al phishing y es recomendado por Microsoft frente a los métodos basados en OTP?",
+      "options": [
+        "Código de un solo uso enviado por SMS",
+        "Respuesta a una pregunta de seguridad",
+        "FIDO2 security key o Windows Hello for Business",
+        "Contraseña de un solo uso enviada por correo electrónico"
+      ],
+      "correctAnswer": 2,
+      "explanation": "FIDO2/WebAuthn y Windows Hello for Business usan criptografía de clave pública vinculada al origen (origin-bound), por lo que resisten ataques de suplantación y MFA fatigue. SMS, correo y preguntas de seguridad pueden verse afectados por ingeniería social o intercepción."
+    },
+    {
+      "id": 8,
+      "domain": 1,
+      "question": "Una aplicación en Azure App Service necesita leer secretos de Key Vault sin guardar credenciales en el código ni en variables de entorno. ¿Qué solución nativa de Azure debe utilizar?",
+      "options": [
+        "Una identidad administrada (managed identity) asignada a la aplicación",
+        "Un service principal con secreto incrustado en el código",
+        "Una URL de acceso compartido (SAS) de larga duración",
+        "Una cuenta de almacenamiento con clave de acceso compartida"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Las identidades administradas (system-assigned o user-assigned) aportan credenciales de corta duración gestionadas automáticamente por Azure. La aplicación accede a Key Vault con RBAC sin custodiar ni rotar secretos manualmente."
+    },
+    {
+      "id": 9,
+      "domain": 2,
+      "question": "Tienes blobs sensibles en una cuenta de almacenamiento y solo debe accederse desde tu red corporativa en Azure. ¿Qué configuración cumple este requisito?",
+      "options": [
+        "Habilitar el firewall de la cuenta con una regla de red virtual o punto de conexión privado, y desactivar el acceso desde todas las redes",
+        "Permitir el acceso anónimo de lectura a los contenedores",
+        "Publicar la cuenta con una URL de firma SAS de solo lectura",
+        "Abrir el puerto 443 en un NSG de la subred de destino"
+      ],
+      "correctAnswer": 0,
+      "explanation": "El firewall de Azure Storage restringe el acceso con reglas de IP, reglas de red virtual o Private Endpoints, bloqueando el acceso público. El acceso anónimo o una SAS no segmenta la red, y un NSG no controla el plano de datos de un servicio PaaS."
+    },
+    {
+      "id": 10,
+      "domain": 2,
+      "question": "¿Qué funcionalidad de Microsoft Defender for Storage ayuda a detectar credenciales, datos personales (PII) y archivos maliciosos almacenados en cuentas de almacenamiento?",
+      "options": [
+        "La detección de datos sensibles, amenazas y malware en blobs",
+        "El aumento del rendimiento de transferencia de datos",
+        "El cifrado del lado del cliente (client-side encryption)",
+        "La aplicación de reglas de retención automática de Azure Policy"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Defender for Storage analiza el contenido y los metadatos de los blobs para identificar secretos expuestos, PII, malware y patrones de acceso sospechosos, generando alertas con recomendaciones de remediación."
+    },
+    {
+      "id": 11,
+      "domain": 2,
+      "question": "¿Cuál de los siguientes NO es un destino válido para enviar los registros de auditoría (Auditing) de Azure SQL Database?",
+      "options": [
+        "Una cuenta de almacenamiento de Azure",
+        "Un workspace de Log Analytics",
+        "Un centro de eventos (Event Hub) de Azure",
+        "Un bucket de Amazon S3"
+      ],
+      "correctAnswer": 3,
+      "explanation": "La auditoría de Azure SQL admite tres destinos: cuenta de almacenamiento, workspace de Log Analytics y Event Hub (este último permite integrar los registros con SIEM como Sentinel). Amazon S3 no es un destino nativo."
+    },
+    {
+      "id": 12,
+      "domain": 2,
+      "question": "Si varias reglas de un grupo de seguridad de red (NSG) coinciden con un paquete, ¿qué regla se aplica?",
+      "options": [
+        "La regla con el número de prioridad más bajo, que se evalúa primero",
+        "La regla creada más recientemente",
+        "La regla cuyo nombre se ordena primero alfabéticamente",
+        "La regla con el rango de puertos más amplio"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Las reglas NSG se procesan por número de prioridad, donde 100 tiene más prioridad que 4096. Si ninguna regla definida coincide, se aplican las reglas por defecto, cuya entrada predeterminada es DenyAllInBound."
+    },
+    {
+      "id": 13,
+      "domain": 2,
+      "question": "¿Cuál es el propósito principal de un grupo de seguridad de aplicación (ASG) en Azure?",
+      "options": [
+        "Agrupar interfaces de red (NIC) con el mismo perfil de puertos para aplicar reglas de NSG por nombre de aplicación",
+        "Asignar direcciones IP privadas automáticamente a las máquinas virtuales",
+        "Balancear el tráfico entre backends virtuales detrás de un punto de conexión privado",
+        "Agrupar usuarios de Entra ID para aplicar políticas de Conditional Access"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Los ASG permiten escribir reglas de NSG referenciando nombres de aplicación (por ejemplo, 'web-servers: 80, 443') en lugar de rangos de IP, lo que simplifica la segmentación cuando las direcciones IP cambian."
+    },
+    {
+      "id": 14,
+      "domain": 2,
+      "question": "¿Qué componente de Azure asigna una dirección IP privada estable desde una VNet a un servicio PaaS (por ejemplo, Azure SQL o Storage) para que el tráfico nunca salga de la red privada?",
+      "options": [
+        "Un Private Endpoint (Azure Private Link)",
+        "Un NAT Gateway",
+        "Un Application Gateway",
+        "Un Azure Front Door"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un Private Endpoint crea una interfaz de red privada (NIC) en la VNet que representa al servicio PaaS y lo resuelve con una IP privada. NAT Gateway gestiona el tráfico saliente a Internet, mientras que Application Gateway y Front Door operan en el borde público."
+    },
+    {
+      "id": 15,
+      "domain": 2,
+      "question": "¿Cuál de las siguientes capacidades es nativa de Microsoft Azure Firewall?",
+      "options": [
+        "El filtrado de tráfico por FQDN y reglas de aplicación, con inteligencia de amenazas e inspección de tráfico privado entre VNet",
+        "La prevención de inyección de SQL y XSS en aplicaciones web según OWASP Top 10",
+        "La mitigación DDoS a escala de red con ajuste automático de tráfico",
+        "El escaneo de malware en cuentas de almacenamiento"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Azure Firewall es un firewall gestionado con reglas de red y de aplicación (FQDN), Threat Intelligence, inspección privada (DPI) y políticas centralizadas (Azure Firewall Policy). WAF cubre OWASP, DDoS Protection mitiga denegaciones de servicio y Defender for Storage analiza malware en blobs."
+    },
+    {
+      "id": 16,
+      "domain": 2,
+      "question": "¿Qué servicio de Azure protege las direcciones IP públicas y las aplicaciones frente a ataques de denegación de servicio distribuido (DDoS) a escala de red?",
+      "options": [
+        "Azure DDoS Protection",
+        "Azure Firewall Manager",
+        "Azure Traffic Manager",
+        "Azure DNS"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Azure DDoS Protection (planes Network Protection e IP Protection) mitiga automáticamente los ataques DDoS con calibración de tráfico, telemetría y protección de coste. La protección básica incluida en Azure no ofrece estas garantías ni visibilidad."
+    },
+    {
+      "id": 17,
+      "domain": 3,
+      "question": "En Microsoft Defender for Cloud, ¿qué concepto describe la gestión de la postura de seguridad de los datos que identifica y clasifica información sensible almacenada en la nube?",
+      "options": [
+        "DSPM (Data Security Posture Management)",
+        "CSPM (Cloud Security Posture Management)",
+        "CWPP (Cloud Workload Protection)",
+        "EASM (External Attack Surface Management)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "DSPM se enfoca en descubrir, clasificar y evaluar el riesgo de datos sensibles. CSPM evalúa la configuración general de la nube, CWPP protege cargas de trabajo en ejecución y EASM mapea el perímetro expuesto a Internet."
+    },
+    {
+      "id": 18,
+      "domain": 3,
+      "question": "¿Qué servicio de Microsoft proporciona identidades dedicadas y gobernanza para agentes de IA (copilots y agentes automatizados) que actúan en nombre de los usuarios?",
+      "options": [
+        "Microsoft Entra Agent ID",
+        "Identidad administrada system-assigned de Azure",
+        "Un service principal clásico sin gobernanza",
+        "Una cuenta de administrador global"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Microsoft Entra Agent ID registra y gobierna los agentes de IA como identidades de primer nivel, permitiendo aplicar permisos, revisión de acceso y políticas de Conditional Access de forma similar a la de los usuarios."
+    },
+    {
+      "id": 19,
+      "domain": 3,
+      "question": "Una organización despliega aplicaciones que utilizan modelos de IA (por ejemplo, Azure OpenAI) con datos corporativos. ¿Qué plan de Microsoft Defender for Cloud está diseñado para proteger estas cargas de trabajo de IA?",
+      "options": [
+        "Defender for AI (protección de aplicaciones y agentes de IA)",
+        "Defender for Storage",
+        "Defender for DNS",
+        "Defender for Resource Graph"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Defender for AI está orientado a proteger las aplicaciones y agentes de IA, detectando configuraciones inseguras, riesgos de datos y vulnerabilidades en el uso de modelos. Los demás planes protegen otros tipos de recursos."
+    },
+    {
+      "id": 20,
+      "domain": 3,
+      "question": "¿Qué par de características de seguridad de arranque distingue a una máquina virtual Trusted Launch de una VM estándar en Azure?",
+      "options": [
+        "Secure Boot y TPM virtual (vTPM)",
+        "BitLocker y cifrado en el host",
+        "Acceso just-in-time y Azure Bastion",
+        "Azure Arc y Azure Automanage"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Trusted Launch habilita Secure Boot, que verifica la integridad de la cadena de arranque, y un vTPM que protege claves y mediciones de arranque para detectar rootkits y bootkits. BitLocker cifra datos, Bastion ofrece acceso seguro desde el portal y Arc gestiona recursos híbridos."
+    },
+    {
+      "id": 21,
+      "domain": 3,
+      "question": "¿Qué servicio de Azure permite registrar y gestionar servidores Windows/Linux on-premises y VMs de otros proveedores como si fueran recursos de Azure (políticas, Defender, actualizaciones)?",
+      "options": [
+        "Azure Arc",
+        "Azure Stack Hub",
+        "Azure Lighthouse",
+        "Azure ExpressRoute"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Azure Arc extiende los servicios de Azure (Azure Policy, Defender for Cloud, Azure Monitor y Update Manager) a infraestructura híbrida y multicloud registrando los servidores como recursos de Azure. ExpressRoute es conectividad privada y Lighthouse gestiona múltiples inquilinos."
+    },
+    {
+      "id": 22,
+      "domain": 3,
+      "question": "En un clúster de Azure Kubernetes Service (AKS), ¿qué mecanismo se recomienda para que un pod acceda a recursos de Azure (como Key Vault) sin guardar credenciales en los manifiestos?",
+      "options": [
+        "Workload Identity basado en la federación OIDC entre AKS y Entra ID",
+        "Credenciales incrustadas en el archivo YAML del despliegue",
+        "Una contraseña compartida entre todos los pods",
+        "Una cuenta de almacenamiento con clave de acceso en texto plano"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Workload Identity federada con OIDC permite que los pods asuman una identidad administrada sin rotar secretos ni distribuir claves. Defender for Containers y las políticas de Azure Policy para Kubernetes complementan la protección del clúster."
+    },
+    {
+      "id": 23,
+      "domain": 3,
+      "question": "Una aplicación alojada en Azure App Service y una API de Azure Functions reciben tráfico HTTP público. ¿Qué servicio protege estos endpoints contra ataques del OWASP Top 10 (inyección, XSS, etc.)?",
+      "options": [
+        "Azure Web Application Firewall (WAF) integrado en Application Gateway o Front Door",
+        "Un grupo de seguridad de red (NSG)",
+        "Azure DNS",
+        "Azure Bastion"
+      ],
+      "correctAnswer": 0,
+      "explanation": "El WAF de Azure se despliega en Application Gateway o Azure Front Door y aplica el Core Rule Set de OWASP sobre el tráfico HTTP/HTTPS que llega a App Service y Functions. Un NSG opera en la capa 3/4 y no inspecciona peticiones web."
+    },
+    {
+      "id": 24,
+      "domain": 4,
+      "question": "¿Qué plan de Microsoft Defender for Cloud ofrece gestión continua de la postura de seguridad (CSPM) con grafo de rutas de ataque (attack paths), evaluación de riesgos y capacidades DevSecOps?",
+      "options": [
+        "Defender CSPM",
+        "Defender for Servers P1",
+        "Solo el plan gratuito de Defender for Cloud",
+        "Una iniciativa de Azure Policy de cumplimiento"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Defender CSPM es el plan avanzado de postura que incluye análisis de rutas de ataque, puntuación de riesgo, gestión de identidades y capacidades de DevSecOps. El plan gratuito se limita a recomendaciones, Secure Score y evaluaciones básicas de cumplimiento."
+    },
+    {
+      "id": 25,
+      "domain": 4,
+      "question": "En Microsoft Defender for Cloud, ¿qué plan de protección de cargas (workload protection) está diseñado para proteger contenedores y clústeres Kubernetes como AKS?",
+      "options": [
+        "Defender for Containers",
+        "Defender for Storage",
+        "Defender for Key Vault",
+        "Defender for Resource Graph"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Defender for Containers protege el clúster, el registro de imágenes y el trabajo en ejecución, generando alertas y recomendaciones específicas de Kubernetes. Defender for Storage protege cuentas de almacenamiento y Defender for Key Vault protege claves y secretos."
+    },
+    {
+      "id": 26,
+      "domain": 4,
+      "question": "¿Qué lenguaje de consulta se utiliza para analizar registros, realizar threat hunting y crear reglas de análisis en Microsoft Sentinel?",
+      "options": [
+        "Kusto Query Language (KQL)",
+        "Transact-SQL (T-SQL)",
+        "SPL de Splunk",
+        "PromQL"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Microsoft Sentinel se basa en Azure Monitor y Log Analytics, por lo que las consultas de análisis, hunting y respuestas se escriben en KQL. T-SQL se usa en SQL Server, SPL es el lenguaje de Splunk y PromQL consulta métricas de Prometheus."
+    },
+    {
+      "id": 27,
+      "domain": 4,
+      "question": "¿Qué tecnología impulsa a Microsoft Security Copilot para investigar incidentes, generar resúmenes y responder preguntas en lenguaje natural?",
+      "options": [
+        "Un modelo de lenguaje de gran escala (LLM) orquestado con capacidades de seguridad y datos de Microsoft",
+        "Un motor de reglas basado únicamente en firmas de malware",
+        "Un firewall de aplicaciones con reglas estáticas",
+        "Un buscador de indexado exclusivo de correo electrónico"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Security Copilot combina un LLM con un orquestador de seguridad, capacidades (plugins) y el contexto de productos Microsoft (Defender, Entra, Sentinel, Intune) para razonar sobre amenazas, generar KQL y reducir el tiempo de investigación."
+    },
+    {
+      "id": 28,
+      "domain": 4,
+      "question": "¿Qué hace Microsoft Defender External Attack Surface Management (EASM)?",
+      "options": [
+        "Descubre y monitorea continuamente los activos expuestos a Internet de la organización, incluidos los no conocidos (shadow IT) y sus vulnerabilidades",
+        "Escanea únicamente las máquinas virtuales internas de la suscripción",
+        "Gestiona los certificados SSL del portal de administración de Azure",
+        "Sustituye a Microsoft Sentinel en la detección de amenazas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "EASM mapea el perímetro externo de la empresa (dominios, direcciones IP, servicios públicos), identifica activos desconocidos y sus riesgos, y complementa la postura interna de Defender for Cloud."
+    },
+    {
+      "id": 29,
+      "domain": 4,
+      "question": "¿Cuál es el valor principal de Microsoft Defender XDR en la respuesta a incidentes?",
+      "options": [
+        "Correlaciona señales de correo, identidad, endpoint y colaboración en incidentes unificados y automatiza la respuesta (aislar dispositivo, bloquear cuenta, eliminar correo)",
+        "Elimina la necesidad de aplicar parches a los sistemas",
+        "Genera únicamente informes de cumplimiento mensuales",
+        "Proporciona conectividad de red privada (VPN) entre sedes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Defender XDR (Extended Detection and Response) unifica la telemetría de los productos Defender (correo, identidad, endpoint, colaboración) con acciones automatizadas de respuesta, mejorando la correlación y reduciendo el tiempo de contención."
+    },
+    {
+      "id": 30,
+      "domain": 4,
+      "question": "En Microsoft Defender for Cloud, ¿qué métrica mide cuán alineada está una organización con las mejores prácticas de seguridad y permite comparar el progreso a lo largo del tiempo?",
+      "options": [
+        "Microsoft Secure Score",
+        "MTTD (mean time to detect)",
+        "Coste total de propiedad (TCO)",
+        "Nivel de disponibilidad del servicio (SLA)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Secure Score puntúa la adopción de recomendaciones de seguridad, muestra las acciones disponibles y permite comparar el avance e incluso el benchmark entre tenants. MTTD mide tiempos de detección y el TCO/SLA no valoran la postura de configuración."
+    }
+  ]
+}
